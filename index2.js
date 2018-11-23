@@ -6,6 +6,7 @@ http.createServer((req, res) =>  {
         console.log(req.url + '进入' + t1)
         res.write(t1 + '\n'); 
 
+        //模拟异步请求
         setTimeout(() =>  {
             res.write(`Request Method:${req.method}\n`)
             res.write(`Request URL:${req.url}\n`); 
